@@ -1,0 +1,9 @@
+const { csvStringToJson } = require("convert-csv-to-json");
+
+jsonStr = "```\n{\n  \"cities\": [\n    {\n      \"name\": \"Dubai\",\n      \"distance_from_dxb\": \"0 km\",\n      \"description\": \"Dubai is a city and emirate in the United Arab Emirates known for its luxurious lifestyle, world-class shopping and entertainment, and iconic landmarks like the Burj Khalifa and the Palm Jumeirah.\"\n    },\n    {\n      \"name\": \"Sharjah\",\n      \"distance_from_dxb\": \"15 km\",\n      \"description\": \"Sharjah is the third-largest city in the United Arab Emirates and the capital of the emirate of Sharjah. It is known for its cultural heritage and Islamic architecture, as well as its large souks (markets).\"\n    },\n    {\n      \"name\": \"Ajman\",\n      \"distance_from_dxb\": \"30 km\",\n      \"description\": \"Ajman is the smallest emirate in the United Arab Emirates. It is known for its beautiful beaches, lush mangroves, and traditional Arabian architecture.\"\n    },\n    {\n      \"name\": \"Umm Al Quwain\",\n      \"distance_from_dxb\": \"50 km\",\n      \"description\": \"Umm Al Quwain is a small emirate in the United Arab Emirates. It is known for its tranquil beaches, desert landscapes, and traditional Arabian culture.\"\n    },\n    {\n      \"name\": \"Ras Al Khaimah\",\n      \"distance_from_dxb\": \"80 km\",\n      \"description\": \"Ras Al Khaimah is the northernmost emirate in the United Arab Emirates. It is known for its rugged mountains, scenic valleys, and hot springs.\"\n    }\n  ]\n}\n```"
+.replace(/```/g, '')
+.replace(/\n/g, '')
+.replace(/\"/g, '"')
+
+console.log(jsonStr);
+console.log(JSON.parse(jsonStr))
